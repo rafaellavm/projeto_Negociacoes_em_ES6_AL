@@ -1,11 +1,14 @@
 class Negociacao{
 
-    constructor(){
+    constructor(data,valor,quantidade){
 
-        this.data = new Date();
-        this.quantidade = 1;
-        this.valor = 0.0;
+        this.data = data;
+        this.quantidade = quantidade;
+        this.valor = valor;
+    }
 
+    obtemVolume(){
 
+        return this.quantidade * this.valor;
     }
 }
