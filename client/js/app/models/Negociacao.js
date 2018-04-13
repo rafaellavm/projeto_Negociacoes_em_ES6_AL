@@ -6,6 +6,9 @@ class Negociacao{
         this._data = data;
         this._quantidade = quantidade;
         this._valor = valor;
+
+        //congelar o objeto
+        Object.freeze(this);
     }
 
     //esse método é acessado como se fosse uma propriedade n1.quantidade
