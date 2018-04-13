@@ -2,31 +2,30 @@ class Negociacao{
 
     constructor(data,valor,quantidade){
 
-        //com underline as propriedades não podem ser acessadas
+        //com underline as propriedades não podem ser acessadas //getter de leitura
         this._data = data;
         this._quantidade = quantidade;
         this._valor = valor;
     }
 
-    getVolume(){
+    //esse método é acessado como se fosse uma propriedade n1.quantidade
+    get volume(){
 
         return this._quantidade * this._valor;
     }
 
     //método acessador
-    getData(){
+    get data(){
 
         return this._data;
     }
 
-     //método acessador
-    getQuantidade(){
+    get quantidade(){
 
         return this._quantidade;
     }
 
-     //método acessador
-    getValor(){
+    get valor(){
 
         return this._valor;
     }
