@@ -3,7 +3,7 @@ class Negociacao{
     constructor(data,valor,quantidade){
 
         //com underline as propriedades não podem ser acessadas //getter de leitura
-        this._data = data;
+        this._data = new Date(data.getTime());
         this._quantidade = quantidade;
         this._valor = valor;
 
@@ -20,7 +20,7 @@ class Negociacao{
     //método acessador
     get data(){
 
-        return this._data;
+        return new Date(this._data.getTime());
     }
 
     get quantidade(){
