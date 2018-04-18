@@ -3,14 +3,20 @@ class NegociacaoController{
     constructor(){
         //coloca a função dentro da variável com associação com o document
        let $ = document.querySelector.bind(document);
-       this.inputQuantidade = $('#quantidade');
-       this.inputData = $('#data');
-       this.inputValor = $('#valor');
+       this._inputQuantidade = $('#quantidade');
+       this._inputData = $('#data');
+       this._inputValor = $('#valor');
     }
 
     adiciona(event){
+        
         event.preventDefault();
-      
-      console.log(this.inputData.value);
+
+        let data = new Date(this._inputData.value.replace(/-/g,','));
+
+        //let negociacao = new Negociacao(this._inputData.value, this._inputValor.value, this._inputQuantidade.value);
+        
+        
+        console.log(data);
     }
 }
