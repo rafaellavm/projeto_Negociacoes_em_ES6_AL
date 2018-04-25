@@ -16,22 +16,18 @@ class NegociacaoController {
             ...this._inputData.value
                 .split('-')
 
-                /*.map(function (item, indice) {
-                    if (indice == 1) {
-                        return item - 1;
-                    }
-                    else{
-                        return item;
-                    }
-
-                })*/
+                .map((item, indice) => item - indice %2)
         );
 
-        console.log(data);
+        let negociacao = new Negociacao( 
+            data,
+            this._inputQuantidade.value,
+            this._inputValor.value,
+            );
 
         //let negociacao = new Negociacao(this._inputData.value, this._inputValor.value, this._inputQuantidade.value);
 
 
-        console.log(data);
+        console.log(negociacao);
     }
 }
