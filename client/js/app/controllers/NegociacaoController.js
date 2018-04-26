@@ -12,15 +12,15 @@ class NegociacaoController {
 
         event.preventDefault();
 
-        let helper = new DataHelper();
+        //let helper = new DataHelper();
         
         let negociacao = new Negociacao( 
-            helper.textoParaData(this._inputData.value),
+            DataHelper.textoParaData(this._inputData.value),
             this._inputQuantidade.value,
             this._inputValor.value,
             );
    
         console.log(negociacao);
-        console.log(helper.dataParaTexto(negociacao.data));
+        console.log(DataHelper.dataParaTexto(negociacao.data));
     }
 }

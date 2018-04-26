@@ -1,17 +1,20 @@
-class DataHelper{
+class DataHelper {
 
-    dataParaTexto(data){
+    constructor() {
+        throw new Error('Esta classe não pode ser instanciado');
+    }
+    static dataParaTexto(data) {
 
         return data.getDate() +
-        "/" + (data.getMonth() + 1) +
-        "/" + data.getFullYear();
+            "/" + (data.getMonth() + 1) +
+            "/" + data.getFullYear();
     }
 
-    textoParaData(texto){
-        
+    static textoParaData(texto) {
+
         return new Date(...texto
-        .split('-')
-        .map((item, indice) => item - indice %2));
+            .split('-')
+            .map((item, indice) => item - indice % 2));
     }
-    
+
 }
