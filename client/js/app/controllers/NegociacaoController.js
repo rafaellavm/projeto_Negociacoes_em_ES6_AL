@@ -18,8 +18,12 @@ class NegociacaoController {
 
         event.preventDefault();
 
+        //console.log(this._criaNegociacao());
         this._listaNegociacoes.adiciona(this._criaNegociacao());
+        this._negociacoesView.update(this._listaNegociacoes);
+
         this._limpaFormulario();
+        
     }
 
     _criaNegociacao(){
