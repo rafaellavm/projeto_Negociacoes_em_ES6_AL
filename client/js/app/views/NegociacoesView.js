@@ -4,7 +4,7 @@ class NegociacoesView extends View{
         super(elemento);
     }
 
-    _template(model) {
+    template(model) {
 
         var retorno = `<table class="table table-hover table-bordered">
             <thead>
