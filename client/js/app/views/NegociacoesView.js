@@ -1,8 +1,7 @@
-class NegociacoesView {
+class NegociacoesView extends View{
 
-    constructor(elemento) { //aqui traz a div de negociacoes
-
-        this._elemento = elemento;
+   constructor(elemento){
+        super(elemento);
     }
 
     _template(model) {
@@ -49,10 +48,6 @@ class NegociacoesView {
         return retorno;
     }
 
-    update(model) {
-
-        this._elemento.innerHTML = this._template(model);
-    }
 }
 
 /*  */
